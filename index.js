@@ -4,6 +4,7 @@ module.exports = {
   extends: 'xo',
   env: {
     protractor: true,
+    jasmine: true,
     mocha: true
   },
   rules: {
