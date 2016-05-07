@@ -1,0 +1,39 @@
+{
+  "name": "eslint-config-wix",
+  "version": "1.0.0",
+  "description": "Shared eslint config for all Wix projects",
+  "scripts": {
+    "build": ":",
+    "test": "eslint .",
+    "release": "wnpm-release",
+    "postpublish": "rm -f npm-shrinkwrap.json"
+  },
+  "files": [
+    "index.js",
+    "esnext.js",
+    "angular.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wix-private/eslint-config-wix.git"
+  },
+  "author": "Shahar Talmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wix-private/eslint-config-wix/issues"
+  },
+  "homepage": "https://github.com/wix-private/eslint-config-wix#readme",
+  "devDependencies": {
+    "eslint": "^2.9.0",
+    "wnpm-ci": "*"
+  },
+  "publishConfig": {
+    "registry": "http://repo.dev.wix/artifactory/api/npm/npm-local/"
+  },
+  "dependencies": {
+    "eslint-config-xo": "*"
+  },
+  "peerDependencies": {
+    "eslint": ">=2.9.0"
+  }
+}
