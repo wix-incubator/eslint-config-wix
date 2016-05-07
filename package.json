@@ -11,7 +11,8 @@
   "files": [
     "index.js",
     "esnext.js",
-    "angular.js"
+    "angular.js",
+    "react.js"
   ],
   "repository": {
     "type": "git",
@@ -31,7 +32,10 @@
     "registry": "http://repo.dev.wix/artifactory/api/npm/npm-local/"
   },
   "dependencies": {
-    "eslint-config-xo": "*"
+    "eslint-config-xo": "*",
+    "eslint-config-xo-react": "*",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-react": "^5.0.1"
   },
   "peerDependencies": {
     "eslint": ">=2.9.0"
