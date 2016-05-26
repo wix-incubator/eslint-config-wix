@@ -11,6 +11,7 @@ module.exports = {
     indent: [2, 2, {
       SwitchCase: 1
     }],
+    'no-warning-comments': 0,
     'padded-blocks': 0,
     'no-throw-literal': 0,
     'no-else-return': 0,
