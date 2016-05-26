@@ -29,6 +29,7 @@ module.exports = {
     'max-nested-callbacks': 0,
     'comma-dangle': [2, 'only-multiline'],
     'quote-props': [2, 'as-needed'],
-    'no-bitwise': 2
+    'no-bitwise': 2,
+    'new-cap': [2, {newIsCapExceptions: ['express']}]
   }
 };
