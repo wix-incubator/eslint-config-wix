@@ -31,6 +31,6 @@ module.exports = {
     'quote-props': [2, 'as-needed'],
     'no-bitwise': 2,
     'new-cap': [2, {newIsCapExceptions: ['express']}],
-    'max-statements-per-line': ['error', 'max': 2]
+    'max-statements-per-line': ['error', {max: 2}]
   }
 };
