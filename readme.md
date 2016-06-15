@@ -64,3 +64,11 @@ And [`wix/react`](react.js) if you're using react:
   "extends": "wix/react"
 }
 ```
+
+And [`wix/mocha`](mocha.js) if you're using mocha:
+
+```json
+{
+  "extends": "wix/mocha"
+}
+```

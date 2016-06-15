@@ -4,7 +4,9 @@
   "description": "Shared eslint config for all Wix projects",
   "scripts": {
     "build": ":",
-    "test": "eslint .",
+    "lint": "eslint .",
+    "pretest": "npm run lint -s",
+    "test": "mocha --reporter mocha-env-reporter",
     "release": "wnpm-release",
     "postpublish": "rm -f npm-shrinkwrap.json"
   },
@@ -12,7 +14,8 @@
     "index.js",
     "esnext.js",
     "angular.js",
-    "react.js"
+    "react.js",
+    "mocha.js"
   ],
   "repository": {
     "type": "git",
@@ -24,18 +27,23 @@
     "url": "https://github.com/wix-private/eslint-config-wix/issues"
   },
   "homepage": "https://github.com/wix-private/eslint-config-wix#readme",
-  "devDependencies": {
-    "eslint": "^2.9.0",
-    "wnpm-ci": "*"
-  },
   "publishConfig": {
     "registry": "http://repo.dev.wix/artifactory/api/npm/npm-local/"
   },
   "dependencies": {
-    "eslint-config-xo": "*",
-    "eslint-config-xo-react": "*",
-    "eslint-plugin-babel": "^3.2.0",
+    "babel-eslint": "latest",
+    "eslint-config-xo": "latest",
+    "eslint-config-xo-react": "latest",
+    "eslint-plugin-babel": "~3.2.0",
+    "eslint-plugin-mocha": "~2.2.0",
     "eslint-plugin-react": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai": "~3.5.0",
+    "eslint": "~2.9.0",
+    "mocha": "~2.5.3",
+    "mocha-env-reporter": "~1.0.2",
+    "wnpm-ci": "latest"
   },
   "peerDependencies": {
     "eslint": ">=2.9.0"
