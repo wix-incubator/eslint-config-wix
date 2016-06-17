@@ -4,7 +4,7 @@
   "description": "Shared eslint config for all Wix projects",
   "scripts": {
     "build": ":",
-    "lint": "eslint .",
+    "lint": "eslint . --ignore-pattern 'test/scripts'",
     "pretest": "npm run lint -s",
     "test": "mocha --reporter mocha-env-reporter",
     "release": "wnpm-release",

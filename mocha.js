@@ -7,7 +7,7 @@ module.exports = {
     mocha: true
   },
   plugins: ['mocha'],
-  'rules': {
+  rules: {
     'mocha/no-exclusive-tests': 2,
     'no-unused-expressions': 0
   }
