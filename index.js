@@ -24,6 +24,7 @@ module.exports = {
     'no-multiple-empty-lines': 0,
     'one-var': 0,
     'no-negated-condition': 0,
+    'no-return-assign': 0,
     radix: 0,
     'no-implicit-globals': 0,
     'one-var-declaration-per-line': 0,
