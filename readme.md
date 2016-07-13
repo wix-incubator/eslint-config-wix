@@ -72,3 +72,11 @@ And [`wix/mocha`](mocha.js) if you're using mocha:
   "extends": "wix/mocha"
 }
 ```
+
+And [`wix/react-native`](react-native.js) if you're using react native:
+
+```json
+{
+  "extends": "wix/react-native"
+}
+```
