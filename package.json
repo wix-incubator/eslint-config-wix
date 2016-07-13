@@ -15,7 +15,8 @@
     "esnext.js",
     "angular.js",
     "react.js",
-    "mocha.js"
+    "mocha.js",
+    "react-native.js"
   ],
   "repository": {
     "type": "git",
@@ -36,7 +37,8 @@
     "eslint-plugin-babel": "~3.2.0",
     "eslint-plugin-react": "~5.0.1",
     "babel-eslint": "latest",
-    "eslint-plugin-mocha": "~2.2.0"
+    "eslint-plugin-mocha": "~2.2.0",
+    "eslint-plugin-react-native-wix": "latest"
   },
   "devDependencies": {
     "chai": "~3.5.0",
