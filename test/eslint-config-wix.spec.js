@@ -26,6 +26,13 @@ describe('wix eslint', () => {
     });
   });
 
+  describe('react-native', () => {
+
+    it('should fail for usage of DeviceEventEmitter.removeAllListeners()', () => {
+      expect(() => exec('react-native', 'react-native/device-event-emitter.js')).to.throw('Never use DeviceEventEmitter.removeAllListeners(). Remove specific listeners, instead');
+    });
+  });
+
   function exec(lintcmd, targetFile) {
     try {
       execSync(`node ./node_modules/.bin/eslint -c ./${lintcmd}.js ./test/scripts/${targetFile}`);
