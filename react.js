@@ -9,5 +9,8 @@ module.exports = {
   ],
   globals: {
     document: false
+  },
+  rules: {
+    'react/jsx-no-bind': [2, {allowArrowFunctions: true}]
   }
 };
