@@ -11,6 +11,7 @@ module.exports = {
     document: false
   },
   rules: {
-    'react/jsx-no-bind': [2, {allowArrowFunctions: true}]
+    'react/jsx-no-bind': [2, {allowArrowFunctions: true}],
+    'react/jsx-pascal-case': [0]
   }
 };

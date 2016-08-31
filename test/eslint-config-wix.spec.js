@@ -33,6 +33,12 @@ describe('wix eslint', () => {
     });
   });
 
+  describe('react', () => {
+    it('should pass for a react component with PascalCase', () => {
+      exec('react', 'react/valid-pascal-case.js');
+    });
+  });
+
   function exec(lintcmd, targetFile) {
     try {
       execSync(`node ./node_modules/.bin/eslint -c ./${lintcmd}.js ./test/scripts/${targetFile}`);
