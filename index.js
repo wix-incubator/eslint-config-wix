@@ -7,6 +7,7 @@ module.exports = {
     jasmine: true,
     mocha: true
   },
+  plugins: ['mocha'],
   rules: {
     indent: [2, 2, {
       SwitchCase: 1
@@ -33,6 +34,7 @@ module.exports = {
     'quote-props': [2, 'as-needed'],
     'no-bitwise': 2,
     'new-cap': [2, {newIsCapExceptions: ['express']}],
-    'max-statements-per-line': ['error', {max: 2}]
+    'max-statements-per-line': ['error', {max: 2}],
+    'mocha/no-exclusive-tests': 'error'
   }
 };
