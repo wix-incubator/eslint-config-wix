@@ -33,8 +33,20 @@ describe('wix eslint', () => {
       exec('react-native', 'react-native/globals.js');
     });
 
-    it('extends react preset', () => {
-      exec('react-native', 'react/valid-pascal-case.js');
+    it('should pass for valid component structure', () => {
+      exec('react-native', 'react-native/valid-component.js');
+    });
+
+    it('should pass for valid functions', () => {
+      exec('react-native', 'react-native/valid-functions.js');
+    });
+
+    it('should fail for invalid functions', () => {
+      expect(() => exec('react-native', 'react-native/invalid-functions.js')).to.throw('Expected parentheses around arrow function argument  babel/arrow-parens');
+    });
+
+    it('should fail for no use before define', () => {
+      expect(() => exec('react-native', 'react-native/no-use-before-define.js')).to.throw('error  \'a\' was used before it was defined  no-use-before-define');
     });
   });
 
