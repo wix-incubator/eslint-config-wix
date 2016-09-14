@@ -5,7 +5,6 @@ const execSync = require('child_process').execSync;
 describe('wix eslint', () => {
 
   describe('mocha', () => {
-
     it('should pass for valid mocha spec', () => {
       exec('mocha', 'mocha/valid.js');
     });
@@ -16,7 +15,6 @@ describe('wix eslint', () => {
   });
 
   describe('esnext', () => {
-
     it('should pass for valid es6', () => {
       exec('esnext', 'esnext/valid.js');
     });
@@ -27,9 +25,28 @@ describe('wix eslint', () => {
   });
 
   describe('react-native', () => {
-
     it('should fail for usage of DeviceEventEmitter.removeAllListeners()', () => {
       expect(() => exec('react-native', 'react-native/device-event-emitter.js')).to.throw('Never use DeviceEventEmitter.removeAllListeners(). Remove specific listeners, instead');
+    });
+
+    it('should define globals defined : __DEV__, fetch', () => {
+      exec('react-native', 'react-native/globals.js');
+    });
+
+    it('should pass for valid component structure', () => {
+      exec('react-native', 'react-native/valid-component.js');
+    });
+
+    it('should pass for valid functions', () => {
+      exec('react-native', 'react-native/valid-functions.js');
+    });
+
+    it('should fail for invalid functions', () => {
+      expect(() => exec('react-native', 'react-native/invalid-functions.js')).to.throw('Expected parentheses around arrow function argument  babel/arrow-parens');
+    });
+
+    it('should fail for no use before define', () => {
+      expect(() => exec('react-native', 'react-native/no-use-before-define.js')).to.throw('error  \'a\' was used before it was defined  no-use-before-define');
     });
   });
 
