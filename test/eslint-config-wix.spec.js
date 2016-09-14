@@ -45,8 +45,8 @@ describe('wix eslint', () => {
       expect(() => exec('react-native', 'react-native/invalid-functions.js')).to.throw('Expected parentheses around arrow function argument  babel/arrow-parens');
     });
 
-    it('should fail for no use before define', () => {
-      expect(() => exec('react-native', 'react-native/no-use-before-define.js')).to.throw('error  \'a\' was used before it was defined  no-use-before-define');
+    it('should allow no use before define', () => {
+      exec('react-native', 'react-native/no-use-before-define.js');
     });
   });
 

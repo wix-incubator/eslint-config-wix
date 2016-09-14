@@ -39,6 +39,7 @@ module.exports = {
       'error',
       'tag-aligned'
     ],
+    'no-use-before-define': 0, //this breaks in react-native apps because of styles
     'react-native-wix/never-device-emitter-remove-all': 2
   },
   globals: {
