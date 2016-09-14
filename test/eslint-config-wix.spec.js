@@ -5,7 +5,6 @@ const execSync = require('child_process').execSync;
 describe('wix eslint', () => {
 
   describe('mocha', () => {
-
     it('should pass for valid mocha spec', () => {
       exec('mocha', 'mocha/valid.js');
     });
@@ -16,7 +15,6 @@ describe('wix eslint', () => {
   });
 
   describe('esnext', () => {
-
     it('should pass for valid es6', () => {
       exec('esnext', 'esnext/valid.js');
     });
@@ -27,9 +25,16 @@ describe('wix eslint', () => {
   });
 
   describe('react-native', () => {
-
     it('should fail for usage of DeviceEventEmitter.removeAllListeners()', () => {
       expect(() => exec('react-native', 'react-native/device-event-emitter.js')).to.throw('Never use DeviceEventEmitter.removeAllListeners(). Remove specific listeners, instead');
+    });
+
+    it('should define globals defined : __DEV__, fetch', () => {
+      exec('react-native', 'react-native/globals.js');
+    });
+
+    it('extends react preset', () => {
+      exec('react-native', 'react/valid-pascal-case.js');
     });
   });
 
