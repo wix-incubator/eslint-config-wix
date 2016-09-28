@@ -8,11 +8,9 @@ module.exports = {
     mocha: true
   },
   plugins: ['mocha'],
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   rules: {
-    strict: 0
-  },
-  rules: {
+    strict: 0,
     indent: [2, 2, {
       SwitchCase: 1
     }],
