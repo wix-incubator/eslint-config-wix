@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 
 export class Welcome extends Component {
+  static name = 'my name';
+
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
