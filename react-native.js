@@ -1,7 +1,11 @@
 'use strict';
-var path = require('path');
+const path = require('path');
 
 module.exports = {
+  parserOptions: {
+    ecmaVersion: 2017,
+    sourceType: 'module'
+  },
   extends: [
     'xo/esnext',
     'xo-react/space',
@@ -11,10 +15,7 @@ module.exports = {
     'react-native-wix'
   ],
   rules: {
-    'react/prop-types': 0, //no prop validations
-    'react/jsx-handler-names': 0, // any prop name is OK
-    'arrow-parens': 0, //doesn't work with babel
-    'babel/arrow-parens': [ // ensure arrow parens
+    'arrow-parens': [
       'error',
       'always'
     ],
@@ -24,8 +25,8 @@ module.exports = {
         args: 'none'
       }
     ],
-    'generator-star-spacing': 0, // doesn't work with babel
-    'babel/generator-star-spacing': [ // spacing in async functions
+    'no-use-before-define': 0, //this breaks in react-native apps because of styles
+    'generator-star-spacing': [ // spacing in async functions
       'error',
       'after'
     ],
@@ -39,7 +40,9 @@ module.exports = {
       'error',
       'tag-aligned'
     ],
-    'no-use-before-define': 0, //this breaks in react-native apps because of styles
+    'react/prop-types': 0, //no prop validations
+    'react/jsx-handler-names': 0, // any prop name is OK
+    'react/forbid-component-props': 0, //no needed in react-native
     'react-native-wix/never-device-emitter-remove-all': 2
   },
   globals: {
