@@ -36,7 +36,8 @@
     "eslint-config-xo-react": "^0.10.0",
     "eslint-plugin-react": "^6.0.0",
     "eslint-plugin-mocha": "^4.0.0",
-    "eslint-plugin-react-native-wix": "^1.0.0"
+    "eslint-plugin-react-native-wix": "^1.0.0",
+    "babel-eslint": "^7.0.0"
   },
   "devDependencies": {
     "chai": "^3.0.0",
