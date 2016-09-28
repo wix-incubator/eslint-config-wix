@@ -42,11 +42,21 @@ describe('wix eslint', () => {
     });
 
     it('should fail for invalid functions', () => {
-      expect(() => exec('react-native', 'react-native/invalid-functions.js')).to.throw('Expected parentheses around arrow function argument  babel/arrow-parens');
+      expect(() => exec('react-native', 'react-native/invalid-functions.js')).to.throw('Expected parentheses around arrow function argument  arrow-parens');
     });
 
     it('should allow no use before define', () => {
       exec('react-native', 'react-native/no-use-before-define.js');
+    });
+
+    it('fails on unused expressions', () => {
+      expect(() => exec('react-native', 'react-native/unused-expressions.js'))
+        .to
+        .throw('Expected an assignment or function call and instead saw an expression  no-unused-expressions');
+    });
+
+    it('allows dangling awaits', () => {
+      exec('react-native', 'react-native/dangling-awaits.js');
     });
   });
 

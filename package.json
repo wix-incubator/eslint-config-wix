@@ -32,19 +32,17 @@
     "registry": "http://repo.dev.wix/artifactory/api/npm/npm-local/"
   },
   "dependencies": {
-    "eslint-config-xo": "~0.14.0",
-    "eslint-config-xo-react": "~0.7.0",
-    "eslint-plugin-babel": "~3.2.0",
-    "eslint-plugin-react": "~5.0.1",
-    "babel-eslint": "latest",
-    "eslint-plugin-mocha": "~2.2.0",
+    "eslint-config-xo": "^0.16.0",
+    "eslint-config-xo-react": "^0.10.0",
+    "eslint-plugin-react": "^6.0.0",
+    "eslint-plugin-mocha": "^4.0.0",
     "eslint-plugin-react-native-wix": "^1.0.0"
   },
   "devDependencies": {
-    "chai": "~3.5.0",
-    "eslint": "~2.9.0",
-    "mocha": "~2.5.3",
-    "mocha-env-reporter": "~1.0.2",
+    "chai": "^3.0.0",
+    "eslint": "^3.0.0",
+    "mocha": "^3.0.0",
+    "mocha-env-reporter": "^1.0.0",
     "wnpm-ci": "latest"
   },
   "peerDependencies": {
