@@ -35,6 +35,7 @@ module.exports = {
     'no-bitwise': 2,
     'new-cap': [2, {newIsCapExceptions: ['express']}],
     'max-statements-per-line': ['error', {max: 2}],
-    'mocha/no-exclusive-tests': 'error'
+    'mocha/no-exclusive-tests': 'error',
+    'valid-typeof': 'error'
   }
 };
