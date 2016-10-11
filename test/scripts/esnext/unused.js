@@ -1,4 +1,4 @@
-'ues strict';
+'use strict';
 const someVar = 'someValue';
 
 module.exports = () => {

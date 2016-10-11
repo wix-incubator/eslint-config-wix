@@ -19,6 +19,10 @@ describe('wix eslint', () => {
       exec('esnext', 'esnext/valid.js');
     });
 
+    it('should have space only after stars in generatrs/yield', () => {
+      exec('esnext', 'esnext/generators.js');
+    });
+
     it('should fail on some violation (unused var)', () => {
       expect(() => exec('esnext', 'esnext/unused.js')).to.throw('\'someVar\' is defined but never used');
     });
