@@ -7,8 +7,9 @@ module.exports = {
     'xo-react/space',
     path.join(__dirname, 'index.js')
   ],
-  globals: {
-    document: false
+  env: {
+    browser: true,
+    node: true
   },
   rules: {
     'react/jsx-no-bind': [2, {allowArrowFunctions: true}],
