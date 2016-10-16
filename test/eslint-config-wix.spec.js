@@ -24,7 +24,7 @@ describe('wix eslint', () => {
     });
 
     it('should fail on some violation (unused var)', () => {
-      expect(() => exec('esnext', 'esnext/unused.js')).to.throw('\'someVar\' is defined but never used');
+      expect(() => exec('esnext', 'esnext/unused.js')).to.throw('no-unused-vars');
     });
   });
 
