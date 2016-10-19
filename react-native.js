@@ -16,6 +16,7 @@ module.exports = {
     'react-native-wix'
   ],
   rules: {
+    'no-unused-expressions': 2,
     'arrow-parens': [
       'error',
       'always'
