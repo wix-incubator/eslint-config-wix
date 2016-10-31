@@ -52,6 +52,7 @@ module.exports = {
   globals: {
     document: false,
     fetch: true,
-    __DEV__: true
+    __DEV__: true,
+    jest: true
   }
 };
