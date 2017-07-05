@@ -7,7 +7,7 @@ module.exports = {
     jasmine: true,
     mocha: true
   },
-  plugins: ['mocha'],
+  plugins: ['mocha', 'jasmine'],
   parser: 'babel-eslint',
   rules: {
     strict: 0,
