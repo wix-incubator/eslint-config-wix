@@ -14,6 +14,16 @@ describe('wix eslint', () => {
     });
   });
 
+  describe('jasmine', () => {
+    it('should pass for valid jasmine spec', () => {
+      exec('jasmine', 'jasmine/valid.js');
+    });
+
+    it('should fail on focused tests (iit, ddescribe)', () => {
+      expect(() => exec('jasmine', 'jasmine/focused.js')).to.throw('Unexpected ddescribe', 'Unexpected iit');
+    });
+  });
+
   describe('esnext', () => {
     it('should pass for valid es6', () => {
       exec('esnext', 'esnext/valid.js');
