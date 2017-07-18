@@ -33,6 +33,7 @@
     "eslint-config-xo-react": "^0.10.0",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-jasmine": "^2.6.2",
+    "eslint-plugin-lodash": "^2.4.4",
     "eslint-plugin-mocha": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-react-native-wix": "^1.0.0"
