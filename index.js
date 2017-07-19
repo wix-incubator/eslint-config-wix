@@ -7,7 +7,7 @@ module.exports = {
     jasmine: true,
     mocha: true
   },
-  plugins: ['mocha', 'jasmine'],
+  plugins: ['mocha', 'jasmine', 'lodash'],
   parser: 'babel-eslint',
   rules: {
     strict: 0,
@@ -38,6 +38,7 @@ module.exports = {
     'new-cap': [2, {newIsCapExceptions: ['express']}],
     'max-statements-per-line': ['error', {max: 2}],
     'mocha/no-exclusive-tests': 'error',
+    'lodash/import-scope': 'warn',
     'generator-star-spacing': ['error', 'after'],
     'yield-star-spacing': ['error', 'after']
   }

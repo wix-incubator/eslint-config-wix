@@ -80,9 +80,15 @@ describe('wix eslint', () => {
     });
   });
 
+  describe('lodash', () => {
+    it('should warn on import-scope', () => {
+      expect(exec('index', 'lodash/import-scope.js').toString('utf8')).to.contains('warning  Do not import from the full Lodash module  lodash/import-scope');
+    });
+  });
+
   function exec(lintcmd, targetFile) {
     try {
-      execSync(`node ./node_modules/.bin/eslint -c ./${lintcmd}.js ./test/scripts/${targetFile}`);
+      return execSync(`node ./node_modules/.bin/eslint -c ./${lintcmd}.js ./test/scripts/${targetFile}`);
     } catch (e) {
       throw new Error(`Message: ${e.toString()}, stdout: ${e.stdout && e.stdout.toString()}, stderr: ${e.stderr && e.stderr.toString()}`);
     }
