@@ -11,7 +11,9 @@ module.exports = {
     browser: true,
     node: true
   },
+  plugins: ['lodash'],
   rules: {
+    'lodash/import-scope': 'warn',
     'react/jsx-no-bind': [2, {allowArrowFunctions: true}],
     'react/jsx-pascal-case': 0,
     'react/no-unused-prop-types': 0,

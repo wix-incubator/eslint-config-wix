@@ -78,11 +78,9 @@ describe('wix eslint', () => {
     it('should pass for a react component with PascalCase', () => {
       exec('react', 'react/valid-pascal-case.js');
     });
-  });
 
-  describe('lodash', () => {
-    it('should warn on import-scope', () => {
-      expect(exec('index', 'lodash/import-scope.js').toString('utf8')).to.contains('warning  Do not import from the full Lodash module  lodash/import-scope');
+    it('should warn on lodash import-scope', () => {
+      expect(exec('react', 'lodash/import-scope.js').toString('utf8')).to.contains('warning  Do not import from the full Lodash module  lodash/import-scope');
     });
   });
 
