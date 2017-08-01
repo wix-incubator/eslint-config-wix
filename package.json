@@ -7,8 +7,7 @@
     "lint": "eslint . --ignore-pattern 'test/scripts'",
     "pretest": "npm run lint -s",
     "test": "mocha --reporter mocha-env-reporter",
-    "release": "wnpm-release",
-    "postpublish": "rm -f npm-shrinkwrap.json"
+    "release": "wnpm-release --no-shrinkwrap"
   },
   "files": [
     "index.js",
