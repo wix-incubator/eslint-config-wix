@@ -80,7 +80,7 @@ describe('wix eslint', () => {
     });
 
     it('should warn on lodash import-scope', () => {
-      expect(exec('react', 'lodash/import-scope.js').toString('utf8')).to.contains('warning  Do not import from the full Lodash module  lodash/import-scope');
+      expect(exec('react', 'lodash/import-scope.js').toString('utf8')).to.contains('warning  Import individual methods from the Lodash module  lodash/import-scope');
     });
   });
 
