@@ -18,10 +18,6 @@ module.exports = {
     'react/jsx-pascal-case': 0,
     'react/no-unused-prop-types': 0,
     'react/no-children-prop': 0,
-    'react/jsx-closing-bracket-location': ['error', {
-      nonEmpty: 'tag-aligned',
-      selfClosing: false
-    }],
     'react/forbid-component-props': 0
   }
 };
