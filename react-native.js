@@ -47,7 +47,8 @@ module.exports = {
     'react/no-children-prop': 0,
     'react/jsx-handler-names': 0, // any prop name is OK
     'react/forbid-component-props': 0, //no needed in react-native
-    'react-native-wix/never-device-emitter-remove-all': 2
+    'react-native-wix/never-device-emitter-remove-all': 2,
+    'react-native-wix/no_disable_yellow_box': 2
   },
   globals: {
     document: false,
