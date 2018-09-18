@@ -33,10 +33,7 @@ module.exports = {
       'after'
     ],
     'react/jsx-no-bind': [ // bind not allowed in render
-      'error',
-      {
-        allowArrowFunctions: true
-      }
+      'warn'
     ],
     'react/jsx-closing-bracket-location': [
       'error',
