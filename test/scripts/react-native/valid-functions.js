@@ -10,7 +10,7 @@ async function zar(a) {
   return await new Promise((r) => r(a));
 }
 
-const goo = async(a) => {
+const goo = async (a) => {
   return await new Promise((r) => r(a));
 };
 
