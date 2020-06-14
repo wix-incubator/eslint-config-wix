@@ -9,6 +9,11 @@ module.exports = {
   },
   plugins: ['mocha', 'jasmine'],
   parser: 'babel-eslint',
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
   rules: {
     strict: 0,
     indent: [2, 2, {
