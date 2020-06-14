@@ -7,7 +7,9 @@
     "lint": "eslint . --ignore-pattern 'test/scripts'",
     "pretest": "npm run lint -s",
     "test": "mocha --reporter mocha-env-reporter",
-    "release": "wnpm-release --no-shrinkwrap"
+    "release": "wnpm-release --no-shrinkwrap",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "index.js",
@@ -36,7 +38,8 @@
     "eslint-plugin-mocha": "^7.0.1",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-native-wix": "^1.0.0",
-    "eslint-plugin-wix-style-react": "^1.0.0"
+    "eslint-plugin-wix-style-react": "^1.0.0",
+    "snyk": "^1.339.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -47,5 +50,6 @@
   },
   "peerDependencies": {
     "eslint": ">=7.2.0"
-  }
+  },
+  "snyk": true
 }
